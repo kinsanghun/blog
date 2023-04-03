@@ -1,0 +1,17 @@
+[
+    {
+        "id": "menu_main",
+        "name": "main",
+        "href": "/"        
+    },
+    {
+        "id": "menu_category",
+        "name": "category",
+        "href": "/category"        
+    },
+    {
+        "id": "menu_post",
+        "name": "post",
+        "href": "/post"        
+    }
+]

@@ -1,0 +1,22 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+// weight info : 100, 300, 400, 500, 700, 900
+
+// variable
+$black : #1f1f1f;
+$white : #f1f1f1;
+
+// font
+* { font-family: 'Roboto', sans-serif; font-size : 1.0rem;}
+h1 { font-size : 2.0rem; font-weight : 900; }
+h2 { font-size : 1.6rem; font-weight : 500; }
+h3 { font-size : 1.35rem; font-weight : 500; }
+h4 { font-size : 1.2rem; font-weight : 400; }
+h5 { font-size : 1.15rem; font-weight : 300; }
+.description { font-size: 0.85rem; font-weight: 300;}
+
+// color 
+.white { color : $white; }
+.black { color : $black; }
+.bg-black { background: $black; }
+.bg-white { background: $white; }

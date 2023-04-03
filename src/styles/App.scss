@@ -1,0 +1,33 @@
+@import './global.scss';
+
+$primary-color : #f94d00;
+
+.App {
+    display: flex;
+    width : 100%;
+    nav {
+        width : 300px;
+        padding : 3rem;
+        transition : 0.5s;
+        background: rgb(239, 239, 239);
+        h2 { margin-bottom : 2.5rem; }
+        ul {
+            width : 100%;
+            li {
+                width : 100%;
+                padding : 10px 0;
+                a { text-decoration: none; color : $black; transition : 0.2s; }
+                a:hover { color : $primary-color; }
+            }
+        }
+        @media screen and (max-width : 1450px) {
+            transform : translateX(-100%);
+        }
+    }
+    
+    &>div {
+        flex : 1;
+        min-height : 100vh;
+        background: $white;
+    }    
+}
