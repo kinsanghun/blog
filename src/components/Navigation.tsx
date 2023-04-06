@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import MENU from "assets/json/menu.json";
 import { Link } from "react-router-dom";
 
@@ -12,21 +12,17 @@ export interface NavigationProps {
     handler : Function;
 }
 
+function NavItem({id, name, href}:Menu) {
+    return (<li key={id}><span className="icon"></span><Link to={href}>{name}</Link></li>);
+}
+
 function Navigation({visible, handler}:NavigationProps) {
-    const [login, setLogin] = useState<boolean>(false);
 
     const navigator:JSX.Element = useMemo<JSX.Element>(():JSX.Element => {
         const MENU_INFO:Menu[] = MENU;
-        const menus = MENU_INFO.map(menu => (<li key={menu.id}><Link to={menu.href}>{menu.name}</Link></li>));
-        return (
-        <ul>
-            {menus}
-            {login ? 
-                (<><li><Link to="/mypage">mypage</Link></li><li><Link to="/logout">logout</Link></li></>): 
-                (<><li><Link to="signup">sign up</Link></li><li><Link to="signin">sign in</Link></li></>)
-            }
-        </ul>);
-    }, [login])
+        const menus = MENU_INFO.map(menu => (<NavItem key={menu.id} id={menu.id} name={menu.name} href={menu.href}/>));
+        return (<ul>{menus}</ul>);
+    }, [])
 
     return (
         <>  
