@@ -75,9 +75,59 @@ section {
     &.top-banner {
         background: rgba(0, 0, 0, 0.6);
     }
+    &.top-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 // component
 
+.draft {
+    position: absolute;
+    bottom : 10%;
+    width : 200%;
+    transform : translateX(-15%);
+    .item {
+        position : absolute;
+        width : 100%;
+        padding-bottom : 100%;
+        animation: draft 4s linear infinite;  
+        z-index: 1000;
+        border-radius: 48%;  
+        &:nth-child(1){
+            background: rgba(188, 220, 240, 0.8);
+            animation: draft 13s ease-in-out infinite;
+            left : -20%;
+        }
+        &:nth-child(2){
+            background: rgba(229, 221, 190, 0.829);
+            animation: draft 15s ease-in-out infinite;
+            left : -10%;
+        }
+        &:nth-child(3){
+            background: rgba(193, 183, 183, 0.691);
+            animation: draft 9s ease-in infinite;
+            left : 0%;
+        }
+        &:nth-child(4){
+            background: rgba(243, 246, 239, 0.887);
+            animation: draft 9s ease-in infinite;
+            left : 10%;
+        }
+        &:nth-child(5){
+            background: rgba(255, 255, 255, 1);
+            animation: draft 9s ease-in infinite;
+            left : -30%;
+        }
+
+        @keyframes draft {
+            0% { transform : rotate(0deg) }
+            100% { transform : rotate(360deg) }
+        }
+    }
+    
+}
 .icon {
     display: block;
     width : 1rem;
