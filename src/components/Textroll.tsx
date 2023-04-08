@@ -16,7 +16,7 @@ function Textroll() {
 
     return (
         <div className='textroll'>
-            <div><img src="assets/images/book.gif" alt="book" width="200px"/></div>
+            <div><img src="assets/images/book.gif" alt="book" width="150px"/></div>
             <div className='content-box'>
                 <div><Text text={`"${PROVERBS[random].text}"`} color={"#4f4f4f"} fontSize="1.6rem"/></div>
                 <div className='writer'>

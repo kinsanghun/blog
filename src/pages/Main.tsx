@@ -3,6 +3,7 @@ import Draft from 'components/Draft';
 import ParallaxComponent from 'components/ParallaxComponent';
 import Text from 'components/Text';
 import Textroll from 'components/Textroll';
+import Title from 'components/Title';
 
 
 function Main() {
@@ -18,6 +19,9 @@ function Main() {
       </ParallaxComponent>
       <section>
         <Textroll/>
+      </section>
+      <section>
+        <Title title='this is title'/>
       </section>
     </div>
   )
